@@ -237,14 +237,19 @@ footer::after {
 .landing main > .right {
     right: var(--pad-t);    
 }
+.landing main > .left::after,
+.landing main > .right::after {
+    display: inline-block;
+    transition-duration: .3s;
+}
 .landing main > .left::after {
     content: "\f104";
 }
 .landing main > .right::after {
     content: "\f105";
 }
-.landing main span:hover {
-    font-size: 2.5rem;
+.landing main span:hover::after {
+    transform: scale(1.2);
 }
 .landing .text,
 .our .text {
